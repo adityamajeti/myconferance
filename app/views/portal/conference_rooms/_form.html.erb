@@ -1,0 +1,32 @@
+<%
+  if params["action"]=="edit"
+    @action = 'update'
+    @method = 'put'
+  else
+    @action = 'create'
+    @method = 'post'
+  end
+%>
+
+<%= form_for @conference_room, :url=>url_for(:action =>@action), :method=>@method do |f| %>
+  <% if conference_room.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(conference_room.errors.count, "error") %> prohibited this conference_room from being saved:</h2>
+
+      <ul>
+      <% conference_room.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit class: "btn btn-gray pull-right" %>
+  </div>
+<% end %>

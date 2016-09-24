@@ -1,0 +1,1 @@
+json.partial! "conference_rooms/conference_room", conference_room: @conference_room

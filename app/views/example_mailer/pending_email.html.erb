@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hi <%= @user.name %></h1>
+    
+    Conference Room Name: <%=ConferenceRoom.find(@booking.conference_room_id).name%></br>
+    Start time : <%=@booking.start_time.localtime.strftime("%d-%m-%Y %H:%M:%S")%></br>
+    End time : <%=@booking.end_time.localtime.strftime("%d-%m-%Y %H:%M:%S")%></br>
+    Status : <%=@booking.status%>
+
+    <p>
+      Conference room in Pending.
+    </p>
+  </body>
+</html>

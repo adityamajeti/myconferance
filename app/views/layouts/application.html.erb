@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyConference</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href="toastr.css" rel="stylesheet"/>
+    <script src="toastr.js"></script>    
+  </head>
+
+  <body>
+    <% unless flash.empty? %>
+      <script type="text/javascript">
+        <% flash.each do |f| %>
+        <% type = f[0].to_s.gsub('alert', 'error').gsub('notice', 'success') %>
+         toastr['<%= type %>']('<%= f[1] %>');
+        <% end %>
+      </script>
+    <% end %>
+
+    <% if user_signed_in? %>
+      <%= render partial: "layouts/after_login"%> 
+    <% else %>
+      <%= render partial: "layouts/before_login"%>       
+    <% end %>
+  </body>
+</html>

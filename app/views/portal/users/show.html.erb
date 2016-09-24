@@ -1,0 +1,19 @@
+<!-- <p id="notice"><%= notice %></p> -->
+<h1>User Details<%= link_to '', edit_portal_user_path(@user), class: "fa fa-pencil-square-o gray pull-right" %></h1>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @user.role %>
+</p>
+
+<%#= link_to 'Back', users_path %>

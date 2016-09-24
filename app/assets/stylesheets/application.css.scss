@@ -1,0 +1,111 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "toastr";
+@import "font-awesome";
+
+$light-orange-color: #F97945;
+$orange-color: #FF6B2F;
+$dark-orange-color: #FF4A00;
+$red-color: #e12828;
+$gray-color: #303134;
+$white-color: #ffffff;
+
+html, body {
+	height: 100%;
+  margin: 0px;
+  background: white;
+  }
+
+  canvas {
+    display: block;
+    margin: 100px auto;
+  }
+
+  .navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+    height: 7.5%
+  }
+
+  .container-fluid {
+  	height: 92.5%;
+  }
+
+  .row.content {
+  	height: 100%;
+  }
+
+  .topnav {
+    background-color: $orange-color;
+  }
+
+  .sidenav {
+    padding: 10px;
+    background-color: $gray-color;
+    height: 100%;
+  }
+
+  .sidenav li a {
+    text-align: left;
+    color: $white-color;
+  }
+
+  .sidenav li a:hover, .sidenav li a:focus, .sidenav li a:active {
+    background-color: $orange-color;
+    border-radius: 7px;
+  }
+
+  .logout a {
+    color: $white-color;    
+  }
+
+  .logout a:hover, .logout a:focus{
+    background-color: $dark-orange-color !important; 
+  }
+
+  .current-username {
+    padding: 15px 10px;
+    color: $white-color;
+  }
+
+  .login-div{
+    color: $gray-color;
+  }
+
+  .title {
+    text-align: center;
+    color: $orange-color;
+    padding-top: 100px;
+  }
+
+  .ml-10 {
+    margin-left: 10px;
+  }
+
+  .mt-10 {
+    margin-top: 10px;
+  }
+
+  .gray {
+    color: $gray-color;
+  }
+
+  .btn-orange {
+    background-color: $orange-color;
+    color: $white-color;
+  }
+  
+  .btn-orange:hover, .btn-orange:focus {
+    background-color: $orange-color;
+    color: $white-color;
+  }
+
+  .btn-gray {
+    background-color: $gray-color;
+    color: $white-color;
+  }
+
+  .btn-gray:hover, .btn-gray:focus {
+    background-color: $gray-color;
+    color: $white-color;
+  }

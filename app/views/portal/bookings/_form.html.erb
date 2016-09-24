@@ -1,0 +1,45 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>  '
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+
+<%
+  if params["action"]=="edit"
+    @action = 'update'
+    @method = 'put'
+  else
+    @action = 'create'
+    @method = 'post'
+  end
+%>
+
+<%= form_for @booking, :url=>url_for(:action => @action), :method => @method  do |f| %>
+
+  <div class="form-group">
+    <%= f.label :start_time %>  
+    <input id="booking_start_time" type="text" placeholder="Select Date dd/mm/yyyy" name="booking[start_time]" data-validate="true" >
+  </div>
+
+  <div class="form-group">
+    <%= f.label :end_time %>
+    <input id="booking_end_time" type="text" placeholder="Select Date dd/mm/yyyy" name="booking[end_time]" data-validate="true" >
+  </div>
+
+  <div class="actions">
+    <%= f.submit class: "btn btn-gray pull-right" %>
+  </div>
+<% end %>
+
+<script type="text/javascript">
+$(document).ready(function() {
+        $(function () {
+            $('#booking_start_time').datetimepicker({
+                format: 'DD/MM/YYYY hh:mm:ss'
+            });
+            $('#booking_end_time').datetimepicker({
+                format: 'DD/MM/YYYY hh:mm:ss'
+            });
+        });
+    });
+</script>

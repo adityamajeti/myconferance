@@ -1,0 +1,8 @@
+<!-- <p id="notice"><%= notice %></p> -->
+<h1>Conference Room Details<%= link_to '', edit_portal_conference_room_path(@conference_room), class: "fa fa-pencil-square-o gray pull-right" %></h1>
+<p>
+  <strong>Name:</strong>
+  <%= @conference_room.name %>
+</p>
+
+<%#= link_to 'Back', conference_rooms_path %>
