@@ -12,8 +12,8 @@ Bundler.require(*Rails.groups)
 module MyConference
   class Application < Rails::Application
 
-  	config.serve_static_files = true
-    config.api_only = false
+  	# config.serve_static_files = true
+    # config.api_only = false
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
