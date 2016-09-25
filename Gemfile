@@ -36,6 +36,7 @@ group :development, :test do
 
   gem "devise"
   gem 'cancancan', '~> 1.10'
+  gem 'unicorn', '~> 5.0', '>= 5.0.1'
   
   gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
   gem "font-awesome-rails"

@@ -38,7 +38,7 @@ development:
   # The password associated with the postgres role (username).
   #password:
 
-  # Connect on a TCP socket. Omitted by default since the client uses a
+-  # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
   # domain sockets, so uncomment these lines.
   #host: localhost
@@ -84,7 +84,7 @@ test:
 #
 production:
   <<: *default
-  url: <%= ENV['REMOTE_DATABASE_URL'] %>
+  url: <%= ENV['HEROKU_POSTGRESQL_JADE_URL'] %>
   # database: apwrd_server_production
   # username: apwrd_server
   # password: <%= ENV['APWRD_SERVER_DATABASE_PASSWORD'] %>
