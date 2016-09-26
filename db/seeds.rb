@@ -8,4 +8,4 @@
 
 Super_Manager = User.create!(name: 'Super Manager', email: 'supermanager@myconference.com', password: 'ZXasqw12', password_confirmation: 'ZXasqw12', role: 'Super_Manager')
 
-Manager = User.create!(name: 'Manager', email: ',manager@myconference.com', password: 'ZXasqw12', password_confirmation: 'ZXasqw12', role: 'Manager')
+Manager = User.create!(name: 'Manager', email: 'manager@myconference.com', password: 'ZXasqw12', password_confirmation: 'ZXasqw12', role: 'Manager')

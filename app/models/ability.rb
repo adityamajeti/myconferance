@@ -8,7 +8,7 @@ class Ability
       can :manage, :all
     elsif user.Client?
       can :read, :User
-      can :manage, ConferenceRoom      
+      can :read, ConferenceRoom      
       can :manage, Booking
     elsif user.Guest?
       can :read, :all        
